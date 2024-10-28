@@ -69,7 +69,7 @@
   );
 }
 
-.contact-section {
+/* .contact-section {
   background: rgb(31, 41, 55);
   background: linear-gradient(
     180deg,
@@ -77,6 +77,14 @@
     rgba(204, 0, 0, 0.5) 50%,
     #151b27 90%
   );
+} */
+
+.contact-section {
+  background: 
+    linear-gradient(to bottom, #151b27 10%, rgba(204, 0, 0, 0.5) 50%, #151b27 90%) no-repeat,
+    linear-gradient(to bottom, #151b27, #151b27) no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }
 
 .service-card {
