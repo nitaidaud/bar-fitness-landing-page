@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy text-white;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-white/90 hover:text-primary-dark transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute w-0 h-0.5 bg-primary-dark bottom-[-4px] left-0 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .custom-btn {
+    @apply bg-primary-dark/70 text-white font-bold py-2 px-4 rounded transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5;
+    transition: 0.3s !important;
+  }
+
+  .hero-image {
+    background-image: url(Images/bg-image2.jpeg);
+    /* background-image: url(Images/bg-image3.jpeg); */
+  }
+
+  .service-card {
+    @apply border-b border-slate-900 rounded-lg p-6 shadow-md transition-all duration-300 hover:border-primary-dark/60 hover:-translate-y-1;
+  }
+
+  .form-input {
+    @apply w-full p-2 rounded bg-navy-light border border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300;
+  }
+}
+
+@media (max-width: 640px) {
+  .carousel-image-container {
+    flex-shrink: 0;
+    width: fit-content; /* Ensure it takes full width */
+    max-width: fit-content; /* Ensure it takes full width */
+  }
+
+  img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without distortion */
+  }
+}
+
+.video-div {
+  background: rgb(31, 41, 55);
+  background: linear-gradient(
+    180deg,
+    rgba(31, 41, 55, 1) 0%,
+    rgba(204, 0, 0, 1) 50%,
+    rgba(31, 41, 48, 1) 100%
+  );
+}
+
+.contact-section {
+  background: rgb(31, 41, 55);
+  background: linear-gradient(
+    180deg,
+    #151b27 10%,
+    rgba(204, 0, 0, 0.5) 50%,
+    #151b27 90%
+  );
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* Creates a new stacking context */
+}
+
+.service-card::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 41, 55, 1) 30%,
+    rgba(36, 40, 53, 1) 50%,
+    rgba(34, 40, 54, 1) 62%,
+    rgba(36, 40, 53, 1) 68%,
+    rgba(159, 11, 14, 1) 100%,
+    rgba(204, 0, 0, 1) 100%
+  );
+  background-size: 100% 200%;
+  background-position: 100% 70%;
+  transition: background-position 0.3s ease;
+}
+
+.service-card:hover::before {
+  background-position: 0 80%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
