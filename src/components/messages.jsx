@@ -20,7 +20,7 @@ export default function Messages() {
     // Auto-advance images every 5 seconds
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) => 
+            setCurrentIndex((prevIndex) =>
                 prevIndex === messagesPics.length - 1 ? 0 : prevIndex + 1
             );
         }, 5000);
@@ -33,17 +33,23 @@ export default function Messages() {
             {/* Main carousel container */}
             <div className="relative h-64 md:h-96 overflow-hidden">
                 {/* Image layers */}
-                {messagesPics.map(({url}, index) => (
-                    <div 
+                {messagesPics.map(({ url }, index) => (
+                    <div
                         key={index}
-                        className={`absolute top-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-                            index === currentIndex ? 'opacity-100' : 'opacity-0'
-                        }`}
+                        className={`absolute top-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                            }`}
                     >
-                        <img 
+                        <img
                             src={url}
                             alt={`Image ${index + 1}`}
-                            className="h-full max-w-fit object-cover mx-auto"
+                            className={`
+                                w-full
+                                h-full
+                                max-w-fit
+                                object-cover
+                                mx-auto
+                                ${navigator.userAgent.indexOf('Safari') !== -1 && !navigator.userAgent.indexOf('Chrome') !== -1 ? 'p-10' : ''} 
+                              `}
                         />
                     </div>
                 ))}
@@ -54,11 +60,10 @@ export default function Messages() {
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
-                            className={`w-2 h-2 rounded-full transition-all ${
-                                index === currentIndex 
-                                    ? 'bg-white scale-125' 
-                                    : 'bg-white/50 hover:bg-white/75'
-                            }`}
+                            className={`w-2 h-2 rounded-full transition-all ${index === currentIndex
+                                ? 'bg-white scale-125'
+                                : 'bg-white/50 hover:bg-white/75'
+                                }`}
                         >
                             <span className="sr-only">Go to slide {index + 1}</span>
                         </button>
