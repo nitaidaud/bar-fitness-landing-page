@@ -113,7 +113,7 @@ export default function Messages() {
                                 pointer-events-none
                                 select-none
                                 ${navigator.userAgent.indexOf('Safari') !== -1 && 
-                                  !navigator.userAgent.indexOf('Chrome') !== -1 ? 'p-10 max-w-full' : ''}
+                                !navigator.userAgent.indexOf('Chrome') !== -1 ? 'p-10 max-w-full' : ''}
                             `}
                             draggable="false"
                         />
