@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 
 export default function Contact() {
     const email_secret = import.meta.env.VITE_EMAILSECRET;
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
 
