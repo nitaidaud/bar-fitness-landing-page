@@ -48,7 +48,7 @@ export default function Messages() {
                                 max-w-fit
                                 object-cover
                                 mx-auto
-                                ${navigator.userAgent.indexOf('Safari') !== -1 && !navigator.userAgent.indexOf('Chrome') !== -1 ? 'p-10' : ''} 
+                                ${navigator.userAgent.indexOf('Safari') !== -1 && !navigator.userAgent.indexOf('Chrome') !== -1 ? 'p-10 max-w-full' : ''} 
                               `}
                         />
                     </div>
