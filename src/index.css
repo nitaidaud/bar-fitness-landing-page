@@ -69,16 +69,6 @@
   );
 }
 
-/* .contact-section {
-  background: rgb(31, 41, 55);
-  background: linear-gradient(
-    180deg,
-    #151b27 10%,
-    rgba(204, 0, 0, 0.5) 50%,
-    #151b27 90%
-  );
-} */
-
 .contact-section {
   background: 
     linear-gradient(to bottom, #151b27 10%, rgba(204, 0, 0, 0.5) 50%, #151b27 90%) no-repeat,
