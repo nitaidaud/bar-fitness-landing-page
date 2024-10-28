@@ -56,7 +56,6 @@ export default function Contact() {
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-bold mb-8 text-center">השינוי שלך מתחיל בצעד קטן</h2>
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
                     <div className="mb-4 fade-in">
                         <label htmlFor="name" className="block mb-2">שם:</label>
                         <input
