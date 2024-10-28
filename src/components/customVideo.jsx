@@ -1,11 +1,13 @@
 import { Pause, Play } from "lucide-react";
 import { useRef, useState } from "react";
+import PropTypes from "prop-types";
 
-export default function CustomVideo(url, index) {
+export default function CustomVideo(props) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [progress, setProgress] = useState(0);
     const videoRef = useRef(null);
-    const vidPath = url.url
+    const vidPath = props.url
+
     const togglePlay = () => {
         if (videoRef.current) {
             if (isPlaying) {
@@ -37,7 +39,7 @@ export default function CustomVideo(url, index) {
             <video
                 ref={videoRef}
                 src={vidPath}
-                poster={`Images/videos posters/poster${index}.jpg`}
+                poster={`Images/videos posters/poster${props.index + 1}.jpg`}
                 playsInline
                 className="rounded-2xl p-1 bg-primary-dark/70 bg-opacity-30 lg:w-full"
                 onTimeUpdate={handleTimeUpdate}
@@ -69,4 +71,8 @@ export default function CustomVideo(url, index) {
             </div>
         </div>
     );
+};
+CustomVideo.propTypes = {
+    url: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
 };
