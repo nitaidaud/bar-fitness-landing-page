@@ -2,7 +2,7 @@
 export default function Hero() {
     return (
         <section
-            className="hero-image h-screen flex-col flex items-center justify-center text-white bg-cover bg-center bg-fixed gap-10 snap-start"
+            className="hero-image h-screen flex-col flex items-center justify-center text-white bg-cover bg-center  gap-10 snap-start"
         >
             <div className="text-center bg-black/60 p-8 rounded animate__animated animate__fadeIn animate__delay-1s backdrop-blur">
                 <h2 className="text-4xl font-bold mb-4">יש לרדת במשקל ויש להתחטב !</h2>
