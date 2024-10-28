@@ -43,7 +43,7 @@ export default function Messages() {
                         <img 
                             src={url}
                             alt={`Image ${index + 1}`}
-                            className="w-full sm:w-1/2 h-full max-w-fit object-cover mx-auto"
+                            className="h-full max-w-fit object-cover mx-auto"
                         />
                     </div>
                 ))}
