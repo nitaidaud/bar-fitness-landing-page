@@ -23,7 +23,7 @@ export default function Trainers() {
                 <div className="md:grid md:grid-cols-2 2xl:grid-cols-none 2xl:grid-flow-col gap-8 trainers-vids">
                     {videos.map(({ url }, index) => (
                         <div key={index} className="my-10 md:my-0">
-                            <CustomVideo url={url} />
+                            <CustomVideo url={url} index={index} />
                         </div>
                     ))}
                 </div>

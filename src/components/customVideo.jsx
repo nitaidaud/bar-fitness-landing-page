@@ -1,7 +1,7 @@
 import { Pause, Play } from "lucide-react";
 import { useRef, useState } from "react";
 
-export default function CustomVideo(url) {
+export default function CustomVideo(url, index) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [progress, setProgress] = useState(0);
     const videoRef = useRef(null);
@@ -37,6 +37,7 @@ export default function CustomVideo(url) {
             <video
                 ref={videoRef}
                 src={vidPath}
+                poster={`Images/videos posters/poster${index}.jpg`}
                 playsInline
                 className="rounded-2xl p-1 bg-primary-dark/70 bg-opacity-30 lg:w-full"
                 onTimeUpdate={handleTimeUpdate}
