@@ -2,7 +2,7 @@ export default function About() {
     return (
         <section id="about" className="py-16 about-section bg-gray-800 fade-in animate__animated">
             <div className=" mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-center w-full lg:w-4/5 gap-14">
+                <div className="flex flex-col md:flex-row items-center justify-center w-full lg:w-[86%] gap-14">
                     <div className="flex justify-center w-fit">
                         <img src="Images/barImage.jpeg" alt="מאמן כושר" className="rounded-full w-52" />
                     </div>
