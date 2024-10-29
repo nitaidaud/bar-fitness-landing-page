@@ -77,6 +77,13 @@
   background-position: center;
 }
 
+.video-div video {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 .service-card {
   position: relative;
   overflow: hidden;
